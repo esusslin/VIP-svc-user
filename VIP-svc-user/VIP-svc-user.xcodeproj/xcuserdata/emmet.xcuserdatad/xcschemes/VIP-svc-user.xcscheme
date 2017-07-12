@@ -48,6 +48,16 @@
                ReferencedContainer = "container:VIP-svc-user.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8644C0841F16C4C000DE2B06"
+               BuildableName = "VIP-svc-userSlowTests.xctest"
+               BlueprintName = "VIP-svc-userSlowTests"
+               ReferencedContainer = "container:VIP-svc-user.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -11,8 +11,12 @@ import XCTest
 
 class VIP_svc_userTests: XCTestCase {
     
+    var userUnderTest: User!
+    
     override func setUp() {
         super.setUp()
+        
+//        userUnderTest = User(userId: "2", firstName: "fred", lastName: "sven", email: ")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

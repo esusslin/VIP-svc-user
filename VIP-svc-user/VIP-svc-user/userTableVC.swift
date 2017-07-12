@@ -9,42 +9,111 @@
 import UIKit
 
 
-struct User {
-    
-    let firstName: String
-    let lastName: String
-    let email: String
-
-    
-    init(firstName: String, lastName: String, email: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-      }
-    
-    }
-
 class userTableVC: UITableViewController {
     
-    // API call here
+//    lazy var http: Http = Http(delegate: self as! HTTPControllerProtocol)
+    
+    
+//    let session = URLSession.shared
+
     var users = [User]()
     
-    let user1 = User(firstName: "bob", lastName: "bobby", email: "bob@bobby.com")
-    let user2 = User(firstName: "phil", lastName: "philly", email: "phil@philly.com")
+    let user1 = User(id: 1, firstName: "bob", lastName: "bobby", email: "bob@bobby.com")
+    let user2 = User(id: 2, firstName: "phil", lastName: "philly", email: "phil@philly.com")
+    
+    
+    func didReceiveUsers(results: NSDictionary?) {
+        DispatchQueue.main.async {
+            
+            let jsonUserArray: NSArray = results!["results"] as! NSArray
+            for object in jsonUserArray {
+                
+                
+                           }
+            self.tableView.reloadData()
+        }
+        
+    }
+
+    
+
     
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.users.append(user1)
-        self.users.append(user2)
+        loadUsers()
+//        self.users.append(user1)
+//        self.users.append(user2)
     }
     @IBAction func back_pressed(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func loadUsers() {
+
+        print("loadUsers")
+        
+        let url = URL(string: "http://192.168.99.100:31582/users")!
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                 print("loadUsers")
+                
+                do {
+                    print("DATA")
+                    
+                    print(data!)
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [AnyObject]
+                    {
+                        
+                        //Implement your logic
+                        print("JSON")
+                        print(json)
+                        
+                        for j in json {
+                           let id = (j as! [String : AnyObject])["id"]! as! Int
+                            let firstName = (j as! [String : AnyObject])["firstName"]!
+                            let lastName = (j as! [String : AnyObject])["lastName"]!
+                            let email = (j as! [String : AnyObject])["email"]!
+                            
+                            print(id)
+                            
+                            let user = User(id: id, firstName: firstName as! String, lastName: lastName as! String, email: email as! String)
+                            
+                            self.users.append(user)
+//                            print(j.id)
+//                            print(j["id"])
+                        }
+                        self.tableView.reloadData()
+
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+        })
+        task.resume()
+    }
+
     
 
     override func didReceiveMemoryWarning() {

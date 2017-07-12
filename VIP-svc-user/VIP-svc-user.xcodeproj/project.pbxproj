@@ -18,6 +18,9 @@
 		8644C06A1F1579D400DE2B06 /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C0691F1579D400DE2B06 /* userCell.swift */; };
 		8644C06C1F157EB700DE2B06 /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C06B1F157EB700DE2B06 /* newUserVC.swift */; };
 		8644C06E1F15835100DE2B06 /* userShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C06D1F15835100DE2B06 /* userShowVC.swift */; };
+		8644C0701F16723900DE2B06 /* http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C06F1F16723900DE2B06 /* http.swift */; };
+		8644C0721F1673C500DE2B06 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C0711F1673C500DE2B06 /* UserModel.swift */; };
+		8644C0881F16C4C000DE2B06 /* VIP_svc_userSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C0871F16C4C000DE2B06 /* VIP_svc_userSlowTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,13 @@
 			remoteInfo = "VIP-svc-user";
 		};
 		8644C0561F15782900DE2B06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8644C02E1F15782900DE2B06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8644C0351F15782900DE2B06;
+			remoteInfo = "VIP-svc-user";
+		};
+		8644C08A1F16C4C000DE2B06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8644C02E1F15782900DE2B06 /* Project object */;
 			proxyType = 1;
@@ -55,6 +65,11 @@
 		8644C0691F1579D400DE2B06 /* userCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		8644C06B1F157EB700DE2B06 /* newUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		8644C06D1F15835100DE2B06 /* userShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userShowVC.swift; sourceTree = "<group>"; };
+		8644C06F1F16723900DE2B06 /* http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = http.swift; sourceTree = "<group>"; };
+		8644C0711F1673C500DE2B06 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8644C0851F16C4C000DE2B06 /* VIP-svc-userSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIP-svc-userSlowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8644C0871F16C4C000DE2B06 /* VIP_svc_userSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIP_svc_userSlowTests.swift; sourceTree = "<group>"; };
+		8644C0891F16C4C000DE2B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8644C0821F16C4C000DE2B06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +110,7 @@
 				8644C0381F15782900DE2B06 /* VIP-svc-user */,
 				8644C04D1F15782900DE2B06 /* VIP-svc-userTests */,
 				8644C0581F15782900DE2B06 /* VIP-svc-userUITests */,
+				8644C0861F16C4C000DE2B06 /* VIP-svc-userSlowTests */,
 				8644C0371F15782900DE2B06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +121,7 @@
 				8644C0361F15782900DE2B06 /* VIP-svc-user.app */,
 				8644C04A1F15782900DE2B06 /* VIP-svc-userTests.xctest */,
 				8644C0551F15782900DE2B06 /* VIP-svc-userUITests.xctest */,
+				8644C0851F16C4C000DE2B06 /* VIP-svc-userSlowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,8 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				8644C0391F15782900DE2B06 /* AppDelegate.swift */,
+				8644C06F1F16723900DE2B06 /* http.swift */,
 				8644C03B1F15782900DE2B06 /* ViewController.swift */,
 				8644C0671F15799F00DE2B06 /* userTableVC.swift */,
+				8644C0711F1673C500DE2B06 /* UserModel.swift */,
 				8644C03D1F15782900DE2B06 /* Main.storyboard */,
 				8644C06D1F15835100DE2B06 /* userShowVC.swift */,
 				8644C06B1F157EB700DE2B06 /* newUserVC.swift */,
@@ -135,6 +161,15 @@
 				8644C05B1F15782900DE2B06 /* Info.plist */,
 			);
 			path = "VIP-svc-userUITests";
+			sourceTree = "<group>";
+		};
+		8644C0861F16C4C000DE2B06 /* VIP-svc-userSlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				8644C0871F16C4C000DE2B06 /* VIP_svc_userSlowTests.swift */,
+				8644C0891F16C4C000DE2B06 /* Info.plist */,
+			);
+			path = "VIP-svc-userSlowTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +228,24 @@
 			productReference = 8644C0551F15782900DE2B06 /* VIP-svc-userUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8644C0841F16C4C000DE2B06 /* VIP-svc-userSlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8644C08E1F16C4C000DE2B06 /* Build configuration list for PBXNativeTarget "VIP-svc-userSlowTests" */;
+			buildPhases = (
+				8644C0811F16C4C000DE2B06 /* Sources */,
+				8644C0821F16C4C000DE2B06 /* Frameworks */,
+				8644C0831F16C4C000DE2B06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8644C08B1F16C4C000DE2B06 /* PBXTargetDependency */,
+			);
+			name = "VIP-svc-userSlowTests";
+			productName = "VIP-svc-userSlowTests";
+			productReference = 8644C0851F16C4C000DE2B06 /* VIP-svc-userSlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +273,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8644C0351F15782900DE2B06;
 					};
+					8644C0841F16C4C000DE2B06 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = KF8E33TYLJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8644C0351F15782900DE2B06;
+					};
 				};
 			};
 			buildConfigurationList = 8644C0311F15782900DE2B06 /* Build configuration list for PBXProject "VIP-svc-user" */;
@@ -238,6 +297,7 @@
 				8644C0351F15782900DE2B06 /* VIP-svc-user */,
 				8644C0491F15782900DE2B06 /* VIP-svc-userTests */,
 				8644C0541F15782900DE2B06 /* VIP-svc-userUITests */,
+				8644C0841F16C4C000DE2B06 /* VIP-svc-userSlowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +327,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8644C0831F16C4C000DE2B06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,8 +343,10 @@
 			files = (
 				8644C06E1F15835100DE2B06 /* userShowVC.swift in Sources */,
 				8644C06A1F1579D400DE2B06 /* userCell.swift in Sources */,
+				8644C0721F1673C500DE2B06 /* UserModel.swift in Sources */,
 				8644C03C1F15782900DE2B06 /* ViewController.swift in Sources */,
 				8644C03A1F15782900DE2B06 /* AppDelegate.swift in Sources */,
+				8644C0701F16723900DE2B06 /* http.swift in Sources */,
 				8644C0681F15799F00DE2B06 /* userTableVC.swift in Sources */,
 				8644C06C1F157EB700DE2B06 /* newUserVC.swift in Sources */,
 			);
@@ -299,6 +368,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8644C0811F16C4C000DE2B06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8644C0881F16C4C000DE2B06 /* VIP_svc_userSlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -311,6 +388,11 @@
 			isa = PBXTargetDependency;
 			target = 8644C0351F15782900DE2B06 /* VIP-svc-user */;
 			targetProxy = 8644C0561F15782900DE2B06 /* PBXContainerItemProxy */;
+		};
+		8644C08B1F16C4C000DE2B06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8644C0351F15782900DE2B06 /* VIP-svc-user */;
+			targetProxy = 8644C08A1F16C4C000DE2B06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -513,6 +595,34 @@
 			};
 			name = Release;
 		};
+		8644C08C1F16C4C000DE2B06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KF8E33TYLJ;
+				INFOPLIST_FILE = "VIP-svc-userSlowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "esusslin.VIP-svc-userSlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIP-svc-user.app/VIP-svc-user";
+			};
+			name = Debug;
+		};
+		8644C08D1F16C4C000DE2B06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KF8E33TYLJ;
+				INFOPLIST_FILE = "VIP-svc-userSlowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "esusslin.VIP-svc-userSlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIP-svc-user.app/VIP-svc-user";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -532,6 +642,7 @@
 				8644C0601F15782900DE2B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8644C0611F15782900DE2B06 /* Build configuration list for PBXNativeTarget "VIP-svc-userTests" */ = {
 			isa = XCConfigurationList;
@@ -540,12 +651,22 @@
 				8644C0631F15782900DE2B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8644C0641F15782900DE2B06 /* Build configuration list for PBXNativeTarget "VIP-svc-userUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8644C0651F15782900DE2B06 /* Debug */,
 				8644C0661F15782900DE2B06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8644C08E1F16C4C000DE2B06 /* Build configuration list for PBXNativeTarget "VIP-svc-userSlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8644C08C1F16C4C000DE2B06 /* Debug */,
+				8644C08D1F16C4C000DE2B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
