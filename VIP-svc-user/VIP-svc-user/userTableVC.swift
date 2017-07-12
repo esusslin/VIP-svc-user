@@ -73,32 +73,22 @@ class userTableVC: UITableViewController {
                  print("loadUsers")
                 
                 do {
-                    print("DATA")
+
                     
                     print(data!)
                     if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [AnyObject]
                     {
-                        
-                        //Implement your logic
-                        print("JSON")
-                        print(json)
-                        
                         for j in json {
-                           let id = (j as! [String : AnyObject])["id"]! as! Int
+                            let id = (j as! [String : AnyObject])["id"]! as! Int
                             let firstName = (j as! [String : AnyObject])["firstName"]!
                             let lastName = (j as! [String : AnyObject])["lastName"]!
                             let email = (j as! [String : AnyObject])["email"]!
-                            
-                            print(id)
-                            
+
                             let user = User(id: id, firstName: firstName as! String, lastName: lastName as! String, email: email as! String)
                             
                             self.users.append(user)
-//                            print(j.id)
-//                            print(j["id"])
                         }
                         self.tableView.reloadData()
-
                     }
                     
                 } catch {
