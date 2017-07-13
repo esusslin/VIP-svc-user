@@ -39,7 +39,9 @@ class userShowVC: UIViewController {
     
     @IBAction func update_Btn_pressed(_ sender: Any) {
         
-        let parameters = ["firstName": firstTxt.text, "lastName": lastTxt.text]
+        
+        
+        let parameters = ["firstName": firstTxt.text, "lastName": lastTxt.text, "email": emailTxt.text]
         
         let urlString = "http://192.168.99.100:31582/users/" + String(describing: self.id!)
         

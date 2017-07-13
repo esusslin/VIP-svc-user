@@ -82,12 +82,13 @@ class userTableVC: UITableViewController {
                             let id = (j as! [String : AnyObject])["id"]! as! Int
                             let firstName = (j as! [String : AnyObject])["firstName"]!
                             let lastName = (j as! [String : AnyObject])["lastName"]!
-                            let email = (j as! [String : AnyObject])["email"]!
+                            var email = (j as! [String : AnyObject])["email"]!
 
                             let user = User(id: id, firstName: firstName as! String, lastName: lastName as! String, email: email as! String)
                             
                             self.users.append(user)
-                        }
+                            }
+                        
                         self.tableView.reloadData()
                     }
                     

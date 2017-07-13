@@ -39,6 +39,35 @@ class newUserVC: UIViewController {
     @IBAction func submitBtn_pressed(_ sender: Any) {
         
         print("createNewUser")
+        
+        let parameters = ["firstName": firstTxt.text, "lastName": lastTxt.text, "email": emailTxt.text]
+        
+        let urlString = "http://192.168.99.100:31582/users"
+        
+        guard let url = URL(string: urlString) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
+            
+            }.resume()
+
     }
 
 }
